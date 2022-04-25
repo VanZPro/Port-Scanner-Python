@@ -1,5 +1,5 @@
 # Multithreaded Port Scanner
-# by VanZ Copyright ©2019
+# by VanZ Copyright ©2022
 from queue import Queue
 import socket
 import threading
@@ -25,7 +25,7 @@ def get_ports(mode):
         for port in range(1, 49152):
             queue.put(port)
     elif mode == 3:
-        ports = [20, 21, 22, 23, 25, 53, 80, 110, 443]
+        ports = [20, 21, 22, 23, 25, 53, 80, 110, 443, 17091]
         for port in ports:
             queue.put(port)
     elif mode == 4:
